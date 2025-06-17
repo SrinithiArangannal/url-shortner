@@ -48,7 +48,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.connectDB = exports.AppDataSource = void 0;
 const typeorm_1 = require("typeorm");
 const dotenv = __importStar(require("dotenv"));
-const logger_1 = __importDefault(require("@/shared/utils/logger"));
+const logger_1 = __importDefault(require("../shared/utils/logger"));
 dotenv.config();
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",

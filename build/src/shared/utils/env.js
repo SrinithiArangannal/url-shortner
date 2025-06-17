@@ -34,7 +34,7 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const yup = __importStar(require("yup"));
-const nodeEnv_enum_1 = require("@/shared/enums/nodeEnv.enum");
+const nodeEnv_enum_1 = require("../../shared/enums/nodeEnv.enum");
 const numberValidation = yup
     .number()
     .required()

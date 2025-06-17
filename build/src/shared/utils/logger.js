@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const pino_1 = __importDefault(require("pino"));
-const loggerLevel_enum_1 = require("@/shared/enums/loggerLevel.enum");
-const nodeEnv_enum_1 = require("@/shared/enums/nodeEnv.enum");
-const env_1 = __importDefault(require("@/shared/utils/env"));
+const loggerLevel_enum_1 = require("../../shared/enums/loggerLevel.enum");
+const nodeEnv_enum_1 = require("../../shared/enums/nodeEnv.enum");
+const env_1 = __importDefault(require("../../shared/utils/env"));
 const loggerConfig = {
     level: env_1.default.LOG_LEVEL || loggerLevel_enum_1.LoggerLevel.INFO,
 };
