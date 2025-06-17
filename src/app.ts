@@ -5,7 +5,7 @@ import envSchema from "@/shared/utils/env";
 import qs from "qs";
 import cors from "cors";
 import helmet from "helmet";
-import { connectDB } from "./configuration/database";
+import { connectDB } from "@/configuration/database";
 
 connectDB();
 

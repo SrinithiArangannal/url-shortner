@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require("express-async-errors");
 const express_1 = __importDefault(require("express"));
-const env_1 = __importDefault(require("@/shared/utils/env"));
+const env_1 = __importDefault(require("./shared/utils/env"));
 const qs_1 = __importDefault(require("qs"));
 const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
