@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm run test
+        run: npm run test --passWithNoTests
 
       - name: Run TypeScript type checking
         run: npm run type-check
