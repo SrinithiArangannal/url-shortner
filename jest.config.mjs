@@ -1,10 +1,8 @@
-module.exports = {
+export default {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
-  coveragePathIgnorePatterns: [
-    "/node_modules/"
-  ],
+  coveragePathIgnorePatterns: ["/node_modules/"],
   testEnvironment: "node",
   testMatch: [
     "**/tests/**/*.[jt]s?(x)",
