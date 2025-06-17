@@ -5,7 +5,7 @@ export default {
   coveragePathIgnorePatterns: ["/node_modules/"],
   testEnvironment: "node",
   testMatch: [
-    "**/tests/**/*.[jt]s?(x)",
+    "**/__tests__/**/*.+(ts|tsx|js)",
     "**/?(*.)+(spec|test).[tj]s?(x)"
   ]
 };
