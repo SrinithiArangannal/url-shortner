@@ -49,6 +49,7 @@ exports.connectDB = exports.AppDataSource = void 0;
 const typeorm_1 = require("typeorm");
 const dotenv = __importStar(require("dotenv"));
 const logger_1 = __importDefault(require("../shared/utils/logger"));
+const Link_1 = require("../repository/models/Link");
 dotenv.config();
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
@@ -57,10 +58,10 @@ exports.AppDataSource = new typeorm_1.DataSource({
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    synchronize: true,
+    synchronize: false,
     logging: true,
-    entities: [],
-    migrations: [__dirname + "/../repository/migrations/*{.ts}"],
+    entities: [Link_1.Link],
+    migrations: ["src/repository/migrations/**/*.ts"],
 });
 let dataSource;
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
