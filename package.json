@@ -5,8 +5,10 @@
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
     "helmet": "^8.1.0",
+    "nanoid": "^3.3.11",
     "pg": "^8.16.0",
     "pino": "^9.7.0",
+    "redis": "^4.7.1",
     "typeorm": "^0.3.24",
     "yup": "^1.6.1"
   },
@@ -44,6 +46,9 @@
     "format:check": "prettier --check .",
     "prepare": "husky",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/.bin/typeorm",
+    "migration:generate": "env-cmd -f .env npm run typeorm migration:generate -- -d ./src/configurations/database.ts src/repository/migrations/migrate --pretty",
+    "migration:run": "env-cmd -f .env npm run typeorm migration:run -- -d ./src/configurations/database.ts"
   }
 }

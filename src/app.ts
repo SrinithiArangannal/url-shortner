@@ -5,7 +5,10 @@ import envSchema from "@/shared/utils/env";
 import qs from "qs";
 import cors from "cors";
 import helmet from "helmet";
-import { connectDB } from "@/configuration/database";
+import { connectDB } from "@/configurations/database";
+
+import apiRoute from "@/routes/index";
+import { ApiRoutes } from "./shared/constants/apiRoutes";
 
 connectDB();
 
@@ -16,7 +19,9 @@ app.set("query parser", (str: string) => {
 });
 app.use(cors());
 app.use(helmet());
+app.use(express.json());
 
+app.use(ApiRoutes.API_BASE, apiRoute);
 const port = envSchema.PORT;
 
 app.listen(port, () => {

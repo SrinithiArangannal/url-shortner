@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm";
 import * as dotenv from "dotenv";
 import logger from "@/shared/utils/logger";
+import { Link } from "@/repository/models/Link";
 
 dotenv.config();
 
@@ -11,10 +12,10 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  synchronize: true,
+  synchronize: false,
   logging: true,
-  entities: [],
-  migrations: [__dirname + "/../repository/migrations/*{.ts}"],
+  entities: [Link],
+  migrations: ["src/repository/migrations/**/*.ts"],
 });
 
 let dataSource: DataSource;
